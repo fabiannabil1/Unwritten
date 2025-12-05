@@ -19,8 +19,11 @@ func translate_inputs(input : InputPackage):
 	if not input.combat_actions.is_empty():
 		input.combat_actions.sort_custom(combat_action_priority_sort)
 		var best_input_action : String = input.combat_actions[0]
-		var translated_into_move_name : String = model.active_weapon.basic_attacks[best_input_action]
-		input.actions.append(translated_into_move_name)
+		var translated_into_move_name = model.active_weapon.basic_attacks.get(best_input_action)
+		if translated_into_move_name:
+			input.actions.append(translated_into_move_name)
+		else:
+			print("Combat.gd: Action '%s' not found in weapon basic_attacks." % best_input_action)
 
 
 func filter_with_resources(input : InputPackage):
@@ -29,7 +32,9 @@ func filter_with_resources(input : InputPackage):
 
 
 static func combat_action_priority_sort(a : String, b : String):
-	if inputs_priority[a] > inputs_priority[b]:
+	var priority_a = inputs_priority.get(a, 0)
+	var priority_b = inputs_priority.get(b, 0)
+	if priority_a > priority_b:
 		return true
 	else:
 		return false

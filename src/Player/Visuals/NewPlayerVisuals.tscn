@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://be6hdawhpurd4"]
+
+[ext_resource type="Script" uid="uid://dh6i2cbhitwtp" path="res://src/Player/Visuals/NewPlayerVisuals.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://b2x44g5iiwiuv" path="res://src/Assets/Char_Skin/playerVisual.tscn" id="2_mesh"]
+[ext_resource type="PackedScene" uid="uid://bb0o3byg0f0uh" path="res://src/Weapons/Skins/SwordVisuals1.tscn" id="3_sword"]
+
+[node name="NewPlayerVisuals" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="playerVisual" parent="." instance=ExtResource("2_mesh")]
+
+[node name="SwordVisuals1" parent="." instance=ExtResource("3_sword")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Status" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 316.0
+offset_bottom = 120.0
+
+[node name="VBox" type="VBoxContainer" parent="UI/Status"]
+layout_mode = 1
+offset_right = 300.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="HealthBar" type="ProgressBar" parent="UI/Status/VBox"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+step = 0.1
+show_percentage = false
+
+[node name="Value" type="Label" parent="UI/Status/VBox/HealthBar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 292.0
+offset_bottom = 19.0
+theme_override_font_sizes/font_size = 14
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaminaBar" type="ProgressBar" parent="UI/Status/VBox"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+step = 0.1
+show_percentage = false
+
+[node name="Value" type="Label" parent="UI/Status/VBox/StaminaBar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 292.0
+offset_bottom = 19.0
+theme_override_font_sizes/font_size = 14
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stamina _bar_" type="Label" parent="."]
+visible = false
+offset_left = 93.0
+offset_top = 91.0
+offset_right = 250.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 35
+text = "Stamina: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health _bar_" type="Label" parent="."]
+visible = false
+offset_left = 90.0
+offset_top = 153.0
+offset_right = 247.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 35
+text = "Health: "
+horizontal_alignment = 1
+vertical_alignment = 1

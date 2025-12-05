@@ -49,7 +49,7 @@
 [ext_resource type="Script" uid="uid://cfksfedyw8vu3" path="res://src/Player/Moves/Midair.gd" id="39_gdq10"]
 [ext_resource type="Script" uid="uid://bffn8656s0wu1" path="res://src/Player/Moves/LandingRun.gd" id="40_j5e1a"]
 [ext_resource type="Script" uid="uid://bh8ehnnqi3kw0" path="res://src/Player/Moves/LandingSprint.gd" id="41_3f8xp"]
-[ext_resource type="PackedScene" uid="uid://d4bm1ogsxjkhx" path="res://src/Player/Moves/Attack.tscn" id="42_bnot5"]
+[ext_resource type="PackedScene" path="res://src/Player/Moves/Attack.tscn" id="42_bnot5"]
 [ext_resource type="PackedScene" uid="uid://bg5gwofry0vww" path="res://src/Player/Moves/Combos/ConsecutiveAttack.tscn" id="43_cefv8"]
 [ext_resource type="Script" uid="uid://m1o8biutxr0s" path="res://src/Player/Moves/Staggered.gd" id="46_ywhv4"]
 [ext_resource type="Script" uid="uid://dwt4jtyyrjdel" path="res://src/Player/HumanoidModel/Parry.gd" id="47_kuxjn"]
@@ -5186,3 +5186,4 @@ playback_default_blend_time = 0.15
 script = ExtResource("8_5xwyl")
 
 [editable path="States/Longsword1"]
+; Force reload

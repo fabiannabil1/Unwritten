@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://87swvf3fxxo1" path="res://src/platform.tscn" id="2_0qwtu"]
 [ext_resource type="PackedScene" uid="uid://drjqcoul7pinv" path="res://src/Player/Player.tscn" id="2_xlegt"]
-[ext_resource type="PackedScene" path="res://src/Player/Enemy.tscn" id="3_enemy"]
+[ext_resource type="PackedScene" uid="uid://dcf0eohhud0s" path="res://src/Player/Enemy.tscn" id="3_enemy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k1mdb"]
 

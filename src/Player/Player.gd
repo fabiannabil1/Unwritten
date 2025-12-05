@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 @onready var input_gatherer = $Input as InputGatherer
 @onready var model = $Model as PlayerModel
-@onready var visuals = $Visuals as PlayerVisuals
+@onready var visuals = $Visuals
 @onready var camera_mount = $CameraMount
 @onready var collider = $Collider
 
